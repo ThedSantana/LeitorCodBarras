@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +52,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //on ActivityResult method
+    public void onActivityResult(int requestCode, int resultCode, Intent intent){
+        if(requestCode == 0){
+            if(resultCode == RESULT_OK){
+                //get the extras that are returned from the intent
+                String contents = intent.getStringExtra("SCAN_RESULT");
+                String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
+                formatTxt.setText("FORMAT: " + format);
+                contentTxt.setText("CONTENT: " + contents);
+                Toast toast = Toast.makeText(this, "Leitura: " + contents + " Formato: " + format, Toast.LENGTH_LONG);
+                toast.show();
+            }
+        }
+    }
 
 
     @Override
