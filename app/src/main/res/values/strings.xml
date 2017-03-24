@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">LeitorCodBarras</string>
     <string name="action_settings">Settings</string>
-    <string name="app_name">LeitorQRCode</string>
 
-<string name="action_settings">Settings</string>
-<string name="btnScan">Scan</string>
-<string name="txtbtnQRcode">Leitor de QR Code</string>
-<string name="txtbtnBarcode">Leitor de Código de Barra</string>
+
+    <string name="btnScan">Scan</string>
+    <string name="txtbtnQRcode">Leitor de QR Code</string>
+    <string name="txtbtnBarcode">Leitor de Código de Barra</string>
 </resources>
